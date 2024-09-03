@@ -2,7 +2,7 @@ package com.fitbit.api.common.model.activities;
 
 import com.fitbit.api.FitbitAPIException;
 import com.fitbit.api.client.http.Response;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

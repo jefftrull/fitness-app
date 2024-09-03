@@ -34,6 +34,7 @@ import seemoo.fitbit.R;
 import seemoo.fitbit.miscellaneous.ConstantValues;
 import seemoo.fitbit.miscellaneous.InternalStorage;
 import seemoo.fitbit.miscellaneous.Messenger;
+import org.spongycastle.jce.provider.BouncyCastleProvider;
 
 /**
  * The main menu.

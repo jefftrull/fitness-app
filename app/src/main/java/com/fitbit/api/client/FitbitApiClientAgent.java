@@ -23,7 +23,7 @@ import com.fitbit.api.common.model.user.FriendStats;
 import com.fitbit.api.common.model.user.UserInfo;
 import com.fitbit.api.common.service.FitbitApiService;
 import com.fitbit.api.model.*;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 import org.joda.time.format.DateTimeFormat;

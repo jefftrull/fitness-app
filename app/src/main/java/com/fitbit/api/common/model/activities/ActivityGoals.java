@@ -1,6 +1,6 @@
 package com.fitbit.api.common.model.activities;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 

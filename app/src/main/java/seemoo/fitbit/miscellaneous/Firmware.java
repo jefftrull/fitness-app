@@ -3,7 +3,7 @@ package seemoo.fitbit.miscellaneous;
 import android.app.Activity;
 import android.util.Log;
 
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.spongycastle.crypto.engines.XTEAEngine;
 import org.spongycastle.crypto.modes.SICBlockCipher;
 import org.spongycastle.crypto.params.KeyParameter;
