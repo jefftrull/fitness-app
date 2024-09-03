@@ -1,34 +1,51 @@
-apply plugin: 'com.android.application'
+plugins {
+    alias(libs.plugins.android.application)
+}
 
 android {
-    compileSdkVersion 25
+    namespace 'seemoo.fitbit'
+    compileSdk 34
+
     defaultConfig {
         applicationId "seemoo.fitbit"
-        minSdkVersion 21
-        targetSdkVersion 25
+        minSdk 21
+        targetSdk 25
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
             debuggable true
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        compose true
+        dataBinding true
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            merges += "META-INF/LICENSE.md"
+            merges += "META-INF/LICENSE-notice.md"
+            merges += "META-INF/NOTICE.md"
+        }
+    }
 }
 
 dependencies {
-    implementation 'com.github.scribejava:scribejava-apis:4.1.1'
-    implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation 'com.jjoe64:graphview:4.2.1'
-    testImplementation 'junit:junit:4.12'
-    implementation files('libs/core-1.58.0.0.jar')
-    implementation files('libs/prov-1.58.0.0.jar')
-}
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     implementation 'androidx.preference:preference:1.0.0'
     implementation libs.androidx.activity.compose
     implementation platform(libs.androidx.compose.bom)
@@ -44,7 +61,13 @@ dependencies {
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
 
+    implementation 'com.github.scribejava:scribejava-apis:4.1.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.jjoe64:graphview:4.2.1'
+    testImplementation 'junit:junit:4.12'
+
     implementation "androidx.constraintlayout:constraintlayout:2.1.4"
     // To use constraintlayout in compose
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
@@ -58,3 +81,5 @@ dependencies {
     implementation "org.apache.commons:commons-lang3:3.17.0"
     implementation "androidx.drawerlayout:drawerlayout:1.2.0"
     implementation "com.madgag.spongycastle:prov:1.58.0.0"
+
+}
