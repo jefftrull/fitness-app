@@ -1,6 +1,6 @@
 package seemoo.fitbit.interactions;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import seemoo.fitbit.commands.Commands;
 import seemoo.fitbit.fragments.MainFragment;
